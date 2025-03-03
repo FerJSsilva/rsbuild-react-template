@@ -4,12 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "rsbuild dev --open",
     "build": "rsbuild build",
+    "preview": "rsbuild preview",
     "build:analyze": "cross-env BUNDLE_ANALYZE=true rsbuild build",
     "check": "biome check --write",
-    "dev": "rsbuild dev --open",
-    "format": "biome format --write",
-    "preview": "rsbuild preview"
+    "format": "biome format --write"
   },
   "dependencies": {
     "react": "^19.0.0",
