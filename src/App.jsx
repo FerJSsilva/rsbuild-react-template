@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Settings from './pages/Settings';
 import Error from './pages/Error';
 import NotFound from './pages/NotFound';
+import TailwindDemo from './pages/TailwindDemo';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Link href="/settings" className="hover:text-blue-400 transition-colors">Settings</Link>
             <Link href="/error" className="hover:text-blue-400 transition-colors">Error</Link>
             <Link href="/not-found" className="hover:text-blue-400 transition-colors">Not Found</Link>
+            <Link href="/tailwind-demo" className="hover:text-blue-400 transition-colors">Tailwind 4</Link>
           </nav>
         </div>
       </header>
@@ -28,6 +30,7 @@ const App = () => {
             <Route path="/" component={Home} />
             <Route path="/settings" component={Settings} />
             <Route path="/error" component={Error} />
+            <Route path="/tailwind-demo" component={TailwindDemo} />
             <Route component={NotFound} />
           </Switch>
         </div>
