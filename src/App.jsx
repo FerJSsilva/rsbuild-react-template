@@ -6,6 +6,7 @@ import Error from './pages/Error';
 import NotFound from './pages/NotFound';
 import TailwindDemo from './pages/TailwindDemo';
 import LucideDemo from './pages/LucideDemo';
+import DateFnsDemo from './pages/DateFnsDemo';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             <Link href="/not-found" className="hover:text-blue-400 transition-colors">Not Found</Link>
             <Link href="/tailwind-demo" className="hover:text-blue-400 transition-colors">Tailwind 4</Link>
             <Link href="/lucide-demo" className="hover:text-blue-400 transition-colors">Lucide Icons</Link>
+            <Link href="/date-fns-demo" className="hover:text-blue-400 transition-colors">Date-fns</Link>
           </nav>
         </div>
       </header>
@@ -34,6 +36,7 @@ const App = () => {
             <Route path="/error" component={Error} />
             <Route path="/tailwind-demo" component={TailwindDemo} />
             <Route path="/lucide-demo" component={LucideDemo} />
+            <Route path="/date-fns-demo" component={DateFnsDemo} />
             <Route component={NotFound} />
           </Switch>
         </div>
