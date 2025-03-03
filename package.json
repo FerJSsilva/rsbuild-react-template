@@ -17,6 +17,8 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@rsbuild/core": "^1.2.11",
-    "@rsbuild/plugin-react": "^1.1.1"
+    "@rsbuild/plugin-react": "^1.1.1",
+    "@tailwindcss/postcss": "^4.0.9",
+    "tailwindcss": "^4.0.9"
   }
 }
