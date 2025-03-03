@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "rsbuild build",
+    "build:analyze": "cross-env BUNDLE_ANALYZE=true rsbuild build",
     "check": "biome check --write",
     "dev": "rsbuild dev --open",
     "format": "biome format --write",
@@ -21,6 +22,7 @@
     "@rsbuild/core": "^1.2.11",
     "@rsbuild/plugin-react": "^1.1.1",
     "@tailwindcss/postcss": "^4.0.9",
+    "cross-env": "^7.0.3",
     "tailwindcss": "^4.0.9"
   }
 }
