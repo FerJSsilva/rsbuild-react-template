@@ -11,6 +11,7 @@ import DateFnsDemo from './pages/DateFnsDemo';
 import ToastDemo from './pages/ToastDemo';
 import RtkQueryDemo from './pages/RtkQueryDemo';
 import FormDemo from './pages/FormDemo';
+import RadixDemo from './pages/RadixDemo';
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
             <Link href="/toast-demo" className="hover:text-blue-400 transition-colors">Toast</Link>
             <Link href="/rtk-query-demo" className="hover:text-blue-400 transition-colors">RTK Query</Link>
             <Link href="/form-demo" className="hover:text-blue-400 transition-colors">Form Demo</Link>
+            <Link href="/radix-demo" className="hover:text-blue-400 transition-colors">Radix UI</Link>
           </nav>
         </div>
       </header>
@@ -54,6 +56,7 @@ const App = () => {
             <Route path="/toast-demo" component={ToastDemo} />
             <Route path="/rtk-query-demo" component={RtkQueryDemo} />
             <Route path="/form-demo" component={FormDemo} />
+            <Route path="/radix-demo" component={RadixDemo} />
             <Route component={NotFound} />
           </Switch>
         </div>
