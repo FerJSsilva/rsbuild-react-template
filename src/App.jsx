@@ -13,7 +13,7 @@ import ToastDemo from './pages/ToastDemo';
 const App = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Toaster position="top-right" toastOptions={{
+      <Toaster position="top-center" toastOptions={{
         duration: 4000,
         style: {
           background: '#363636',
