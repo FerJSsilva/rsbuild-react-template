@@ -1,10 +1,42 @@
 @import 'tailwindcss';
 
+/**
+ * Sistema centralizado de cores
+ * Todas as cores principais do projeto estão definidas aqui como variáveis CSS
+ * Para alterar a paleta de cores, basta modificar os valores nesta seção
+ */
+:root {
+  /* Cores principais da nova paleta de azuis */
+  --color-primary: #005cd3;    /* Azul brilhante */
+  --color-secondary: #4e9fff;  /* Azul claro */
+  --color-text: #ffffff;       /* Branco para texto sobre fundos escuros */
+  
+  /* Header */
+  --color-header-bg: #00378f;  /* Azul escuro */
+  --color-header-text: var(--color-text);
+  
+  /* Conteúdo */
+  --color-content-bg: #00378f;  /* #1962ff com opacidade */
+  --color-content-card: rgba(0,92,211, 0.5); /* #4e9fff com opacidade */
+  
+  /* Footer */
+  --color-footer-bg: #00378f;  /* Azul muito escuro */
+  --color-footer-text: #c9e3ff; /* Versão clara de #4e9fff */
+  
+  /* Links */
+  --color-link-active: #1962ff; /* Azul médio */
+  --color-link-hover: #4e9fff;  /* Azul claro */
+  
+  /* Outros elementos */
+  --color-shadow: rgba(0, 45, 74, 0.2);      /* Baseado no #002d4a */
+  --color-shadow-dark: rgba(0, 45, 74, 0.4); /* Baseado no #002d4a */
+}
+
 body {
   margin: 0;
-  color: #fff;
+  color: var(--color-text);
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  background-image: linear-gradient(to bottom, #020917, #101725);
+  background-image: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
   min-height: 100vh;
 }
 
@@ -28,7 +60,7 @@ p {
 
 /* Estilo para links ativos */
 .active-link {
-  color: #60a5fa; /* blue-400 */
+  color: var(--color-link-active);
   font-weight: 500;
 }
 
@@ -39,9 +71,30 @@ a {
 
 /* Estilo para cards de conteúdo */
 .content-card {
-  background-color: rgba(31, 41, 55, 0.7); /* gray-800 com opacidade */
+  background-color: var(--color-content-card);
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px var(--color-shadow), 0 2px 4px -1px var(--color-shadow-dark);
+}
+
+/* Classes personalizadas para sobrepor o Tailwind quando necessário */
+.header-bg {
+  background-color: var(--color-header-bg);
+}
+
+.footer-bg {
+  background-color: var(--color-footer-bg);
+}
+
+.footer-text {
+  color: var(--color-footer-text);
+}
+
+.content-bg {
+  background-color: var(--color-content-bg);
+}
+
+.link-hover:hover {
+  color: var(--color-link-hover);
 }
