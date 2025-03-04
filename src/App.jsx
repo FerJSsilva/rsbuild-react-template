@@ -1,5 +1,6 @@
 import './App.css';
 import { Route, Switch, Link } from 'wouter';
+import { Toaster } from 'react-hot-toast';
 import Home from './pages/Home';
 import Settings from './pages/Settings';
 import Error from './pages/Error';
@@ -7,10 +8,18 @@ import NotFound from './pages/NotFound';
 import TailwindDemo from './pages/TailwindDemo';
 import LucideDemo from './pages/LucideDemo';
 import DateFnsDemo from './pages/DateFnsDemo';
+import ToastDemo from './pages/ToastDemo';
 
 const App = () => {
   return (
     <div className="flex flex-col min-h-screen">
+      <Toaster position="top-right" toastOptions={{
+        duration: 4000,
+        style: {
+          background: '#363636',
+          color: '#fff',
+        },
+      }} />
       {/* Cabeçalho */}
       <header className="fixed top-0 w-full bg-gray-900 text-white shadow-md z-10">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -23,6 +32,7 @@ const App = () => {
             <Link href="/tailwind-demo" className="hover:text-blue-400 transition-colors">Tailwind 4</Link>
             <Link href="/lucide-demo" className="hover:text-blue-400 transition-colors">Lucide Icons</Link>
             <Link href="/date-fns-demo" className="hover:text-blue-400 transition-colors">Date-fns</Link>
+            <Link href="/toast-demo" className="hover:text-blue-400 transition-colors">Toast</Link>
           </nav>
         </div>
       </header>
@@ -37,6 +47,7 @@ const App = () => {
             <Route path="/tailwind-demo" component={TailwindDemo} />
             <Route path="/lucide-demo" component={LucideDemo} />
             <Route path="/date-fns-demo" component={DateFnsDemo} />
+            <Route path="/toast-demo" component={ToastDemo} />
             <Route component={NotFound} />
           </Switch>
         </div>
