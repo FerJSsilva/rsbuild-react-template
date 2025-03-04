@@ -9,6 +9,7 @@ import TailwindDemo from './pages/TailwindDemo';
 import LucideDemo from './pages/LucideDemo';
 import DateFnsDemo from './pages/DateFnsDemo';
 import ToastDemo from './pages/ToastDemo';
+import RtkQueryDemo from './pages/RtkQueryDemo';
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
             <Link href="/lucide-demo" className="hover:text-blue-400 transition-colors">Lucide Icons</Link>
             <Link href="/date-fns-demo" className="hover:text-blue-400 transition-colors">Date-fns</Link>
             <Link href="/toast-demo" className="hover:text-blue-400 transition-colors">Toast</Link>
+            <Link href="/rtk-query-demo" className="hover:text-blue-400 transition-colors">RTK Query</Link>
           </nav>
         </div>
       </header>
@@ -48,6 +50,7 @@ const App = () => {
             <Route path="/lucide-demo" component={LucideDemo} />
             <Route path="/date-fns-demo" component={DateFnsDemo} />
             <Route path="/toast-demo" component={ToastDemo} />
+            <Route path="/rtk-query-demo" component={RtkQueryDemo} />
             <Route component={NotFound} />
           </Switch>
         </div>
