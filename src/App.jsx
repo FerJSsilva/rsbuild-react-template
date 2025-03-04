@@ -2,9 +2,6 @@ import './App.css';
 import { Route, Switch, Link } from 'wouter';
 import { Toaster } from 'react-hot-toast';
 import Home from './pages/Home';
-import Settings from './pages/Settings';
-import Error from './pages/Error';
-import NotFound from './pages/NotFound';
 import TailwindDemo from './pages/TailwindDemo';
 import LucideDemo from './pages/LucideDemo';
 import DateFnsDemo from './pages/DateFnsDemo';
@@ -12,6 +9,9 @@ import ToastDemo from './pages/ToastDemo';
 import RtkQueryDemo from './pages/RtkQueryDemo';
 import FormDemo from './pages/FormDemo';
 import RadixDemo from './pages/RadixDemo';
+import Settings from './pages/Settings';
+import Error from './pages/Error';
+import NotFound from './pages/NotFound';
 
 const App = () => {
   return (
@@ -29,9 +29,6 @@ const App = () => {
           <div className="text-xl font-bold">React Template</div>
           <nav className="flex space-x-6">
             <Link href="/" className="hover:text-blue-400 transition-colors">Home</Link>
-            <Link href="/settings" className="hover:text-blue-400 transition-colors">Settings</Link>
-            <Link href="/error" className="hover:text-blue-400 transition-colors">Error</Link>
-            <Link href="/not-found" className="hover:text-blue-400 transition-colors">Not Found</Link>
             <Link href="/tailwind-demo" className="hover:text-blue-400 transition-colors">Tailwind 4</Link>
             <Link href="/lucide-demo" className="hover:text-blue-400 transition-colors">Lucide Icons</Link>
             <Link href="/date-fns-demo" className="hover:text-blue-400 transition-colors">Date-fns</Link>
@@ -39,6 +36,9 @@ const App = () => {
             <Link href="/rtk-query-demo" className="hover:text-blue-400 transition-colors">RTK Query</Link>
             <Link href="/form-demo" className="hover:text-blue-400 transition-colors">Form Demo</Link>
             <Link href="/radix-demo" className="hover:text-blue-400 transition-colors">Radix UI</Link>
+            <Link href="/settings" className="hover:text-blue-400 transition-colors">Settings</Link>
+            <Link href="/error" className="hover:text-blue-400 transition-colors">Error</Link>
+            <Link href="/not-found" className="hover:text-blue-400 transition-colors">Not Found</Link>
           </nav>
         </div>
       </header>
@@ -48,8 +48,6 @@ const App = () => {
         <div className="bg-gray-800 bg-opacity-50 rounded-lg shadow-lg p-6">
           <Switch>
             <Route path="/" component={Home} />
-            <Route path="/settings" component={Settings} />
-            <Route path="/error" component={Error} />
             <Route path="/tailwind-demo" component={TailwindDemo} />
             <Route path="/lucide-demo" component={LucideDemo} />
             <Route path="/date-fns-demo" component={DateFnsDemo} />
@@ -57,6 +55,8 @@ const App = () => {
             <Route path="/rtk-query-demo" component={RtkQueryDemo} />
             <Route path="/form-demo" component={FormDemo} />
             <Route path="/radix-demo" component={RadixDemo} />
+            <Route path="/settings" component={Settings} />
+            <Route path="/error" component={Error} />
             <Route component={NotFound} />
           </Switch>
         </div>
